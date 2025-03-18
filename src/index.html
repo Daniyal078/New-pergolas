@@ -1,0 +1,421 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css?v=0.5" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+        integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Home</title>
+</head>
+
+<body class="min-w-[360px]">
+    <div class="mask hidden h-screen w-screen bg-black opacity-40 fixed"></div>
+    <nav class="border-b">
+        <div class="text-center py-3 bg-black text-white md:text-base text-xs">Winter Sale on All Pergolas with Free
+            Express Delivery - 50% OFF! <a class="font-semibold" href="">ShopNow</a></div>
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between py-5 gap-2">
+                <div class="flex items-center gap-3">
+                    <i id="hamburger-btn" class="text-2xl ri-menu-line lg:hidden"></i>
+                    <a href="index.html">
+                        <img src="images/black-logo.png" alt="">
+                    </a>
+                </div>
+                <div>
+                    <ul class="lg:flex hidden xl:gap-8 lg:gap-x-3">
+                        <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="index.html">Home</a></li>
+                        <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="our-story.html">Our
+                                Story</a></li>
+                        <div class="dropdown cursor-pointer group">
+                            <li class="xl:text-base lg:text-sm font-medium text-nowrap">Pergolas<i
+                                    class="ri-arrow-down-s-fill"></i></li>
+                            <div class="dropdown-menu relative">
+                                <ul class="absolute bg-white shadow  hidden group-hover:block">
+                                    <li
+                                        class="text-sm p-3 cursor-pointer font-medium text-nowrap capitalize hover:bg-green-800 hover:text-white">
+                                        <a href="outdoor-kitchens.html">outdoor kitchen</a>
+                                    </li>
+                                    <li
+                                        class="text-sm p-3 cursor-pointer font-medium text-nowrap capitalize hover:bg-green-800 hover:text-white">
+                                        <a href="mounted-pergolas-on-brackets.html">Mounted on brackets</a>
+                                    </li>
+                                    <li
+                                        class="text-sm p-3 cursor-pointer font-medium text-nowrap capitalize hover:bg-green-800 hover:text-white">
+                                        <a href="plain-modern-free-standing-pergolas.html">Free Standing</a>
+                                    </li>
+                                    <li
+                                        class="text-sm p-3 cursor-pointer font-medium text-nowrap capitalize hover:bg-green-800 hover:text-white">
+                                        <a href="modern-wall-mounted-pergolas.html">Modern wall mounded</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="shop.html">Shop</a></li>
+                        <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a
+                                href="inspiration-gallery.html">Inspiration Gallery</a></li>
+                        <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="contact-us.html">Contact
+                                Us</a></li>
+                    </ul>
+
+
+                    <div id="mobile-menu"
+                        class="lg:hidden hidden flex flex-col fixed top-0 bg-white left-0  -left-[100%] p-8 h-screen w-[300px] bg-white z-20">
+                        <div>
+                            <i id="close-btn" class="ri-close-circle-fill text-3xl float-end lg:hidden"></i>
+                        </div>
+                        <ul class=" flex flex-col gap-3 mt-3">
+                            <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="index.html">Home</a>
+                            </li>
+                            <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="our-story.html">Our
+                                    Story</a></li>
+                            <div class="dropdown cursor-pointer group">
+                                <li class="xl:text-base lg:text-sm flex items-center font-medium text-nowrap">Pergolas<i
+                                        class="ri-arrow-down-s-fill mt-2 "></i></li>
+                                <div class="dropdown-menu ">
+                                    <ul class="  bg-white hidden group-hover:block">
+                                        <li
+                                            class="text-sm py-3 px-1  cursor-pointer font-medium text-nowrap capitalize hover:bg-gray-200">
+                                            <a href="outdoor-kitchens.html">outdoor kitchen</a>
+                                        </li>
+                                        <li
+                                            class="text-sm  py-3  px-1 cursor-pointer font-medium text-nowrap capitalize hover:bg-gray-200">
+                                            <a href="mounted-pergolas-on-brackets.html">mounted on brackets</a>
+                                        </li>
+                                        <li
+                                            class="text-sm   py-3 px-1  cursor-pointer font-medium text-nowrap capitalize hover:bg-gray-200">
+                                            <a href="plain-modern-free-standing-pergolas.html">Free Standing</a>
+                                        </li>
+                                        <li
+                                            class="text-sm   py-3 px-1  cursor-pointer font-medium text-nowrap capitalize hover:bg-gray-200">
+                                            <a href="modern-wall-mounted-pergolas.html">Modern wall mounded</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="shop.html">Shop</a>
+                            </li>
+                            <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a
+                                    href="inspiration-gallery.html">Inspiration Gallery</a></li>
+                            <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a
+                                    href="contact-us.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex items-center gap-x-3">
+                    <div class="lg:flex hidden items-center bg-gray-100 rounded">
+                        <input style="font-size: 12px;" class="bg-transparent outline-none px-4 p-2"
+                            placeholder="What are you looking for?" type="text">
+                        <i class="ri-search-line px-3 text-2xl"></i>
+                    </div>
+
+                    <div class="flex items-center md:gap-5 gap-3">
+                        <i class="lg:hidden text-xl ri-search-line"></i>
+                        <a href="cart.html">
+                            <i class="text-xl ri-shopping-cart-2-line"></i>
+                        </a>
+
+                        <div class="dropdown cursor-pointer group">
+                            <div class="xl:text-base lg:text-sm font-medium text-nowrap"><i
+                                    class="text-xl ri-user-line"></i><i class="ri-arrow-down-s-fill"></i></div>
+                            <div class="dropdown-menu relative">
+                                <ul class="absolute -left-20 bg-white shadow hidden group-hover:block">
+                                    <li
+                                        class="text-sm p-3 cursor-pointer font-medium text-nowrap capitalize hover:bg-green-800 hover:text-white">
+                                        <a href="#">My Account</a>
+                                    </li>
+                                    <li
+                                        class="text-sm p-3 cursor-pointer font-medium text-nowrap capitalize hover:bg-green-800 hover:text-white">
+                                        <a href="#">Login / Register</a>
+                                    </li>
+                                    <li
+                                        class="text-sm p-3 cursor-pointer font-medium text-nowrap capitalize hover:bg-green-800 hover:text-white">
+                                        <a href="#">Cart</a>
+                                    </li>
+                                    <li
+                                        class="text-sm p-3 cursor-pointer font-medium text-nowrap capitalize hover:bg-green-800 hover:text-white">
+                                        <a href="#">Wishlist</a>
+                                    </li>
+                                    <li
+                                        class="text-sm p-3 cursor-pointer font-medium text-nowrap capitalize hover:bg-green-800 hover:text-white">
+                                        <a href="#">Shop</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <section class="bg-[url('images/nav-bg.jpg')]  bg-no-repeat bg-cover bg-center">
+        <div class="mx-auto py-10 space-y-6 grid place-content-center bg-[#00000094] h-[500px]">
+            <img class="mx-auto block lg:w-40" src="images/white-Logo.png" alt="">
+            <div class="text-center text-white font-medium lg:text-4xl md:text-3xl text-xl">
+                <div>For Those Who Want The Best</div>
+                <div>America's #1 Pergola Kit</div>
+            </div>
+            <div class="flex justify-center gap-3">
+                <button
+                    class="bg-white rounded-md p-2 px-4 font-semibold duration-300 hover:bg-black hover:text-white">Luxury
+                    Pergola</button>
+                <button
+                    class="bg-white rounded-md p-2 px-4 font-semibold duration-300 hover:bg-black hover:text-white">Outdoor
+                    Kitchens</button>
+            </div>
+            <div class="text-center text-white">10+ Years Experience Only USA Made Pergola Kit</div>
+        </div>
+    </section>
+
+
+    <section class="py-10">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-4 sm:grid-cols-2 gap-5 gap-y-9">
+                <div class="text-center space-y-3">
+                    <img class="mx-auto" src="images/Icon.png" alt="">
+                    <div class="text-2xl font-medium">Free Easy Shipping</div>
+                    <div>Shipping for all pergola units is FREE. Can't beat that price. Choose your delivery timeframe.
+                    </div>
+                </div>
+                <div class="text-center space-y-3">
+                    <img class="mx-auto" src="images/g3447.png" alt="">
+                    <div class="text-2xl font-medium">Customer service</div>
+                    <div>We run a small team that works closely with you. We promise to try our best to answer: +1 (786)
+                        278-4406
+                    </div>
+                </div>
+                <div class="text-center space-y-3">
+                    <img class="mx-auto" src="images/Layer_1.png" alt="">
+                    <div class="text-2xl font-medium">Incredible Warranty</div>
+                    <div>All Luxury Pergola Pro, Ultra and Magnum units are guaranteed for as long as you live in your
+                        home. For warranty information <a class="text-green-800 font-semibold"
+                            href="Lifetime-Warranty.html">Click Here.</a>
+                    </div>
+                </div>
+                <div class="text-center space-y-3">
+                    <img class="mx-auto" src="images/Vector.png" alt="">
+                    <div class="text-2xl font-medium">Secure Payments</div>
+                    <div>All our pergolas are processed securely so you don't have to worry.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="py-10">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-4 sm:grid-cols-2 gap-3">
+                <div class=" bg-[url('images/IMG_5775.JPEG')] bg-cover">
+                    <div class="h-[400px] min-w-full bg-[#00000094] flex items-end justify-center">
+                        <div class="flex items-center justify-around w-full my-10">
+                            <div class="text-white font-semibold">Mounted on brackets</div>
+                            <i
+                                class="ri-arrow-right-line bg-white rounded-full duration-300 hover:bg-black hover:text-white text-2xl px-1"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[url('images/IMG_4580.JPG')] bg-cover">
+                    <div class="h-[400px] min-w-full bg-[#00000094] flex items-end justify-center">
+                        <div class="flex items-center justify-around w-full my-10">
+                            <div class="text-white font-semibold">Attached modern pergolas </div>
+                            <i
+                                class="ri-arrow-right-line bg-white rounded-full duration-300 hover:bg-black hover:text-white text-2xl px-1"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[url('images/IMG_8662.JPG')] bg-cover">
+                    <div class="h-[400px] min-w-full bg-[#00000094] flex items-end justify-center">
+                        <div class="flex items-center justify-around w-full my-10">
+                            <div class="text-white font-semibold">Plain modern free standing </div>
+                            <i
+                                class="ri-arrow-right-line bg-white rounded-full duration-300 hover:bg-black hover:text-white text-2xl px-1"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[url('images/d89b8c6045472dd5a48bf0e02238e280.png')] bg-cover">
+                    <div class="h-[400px] min-w-full bg-[#00000094] flex items-end justify-center">
+                        <div class="flex items-center justify-around w-full my-10">
+                            <div class="text-white font-semibold">Outdoor Kitchens</div>
+                            <i
+                                class="ri-arrow-right-line bg-white rounded-full duration-300 hover:bg-black hover:text-white text-2xl px-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-10">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2  gap-3">
+                <div class=" bg-[url('images/IMG_4580.JPG')] bg-cover">
+                    <div class="w-full h-full bg-[#ffffffd5] p-8 space-y-4">
+                        <div class="md:text-3xl text-xl font-semibold">Inspiration Gallery</div>
+                        <div>Get inspired. See completed projects from our customers to get some ideas on how to improve
+                            your backyard today.
+                        </div>
+                        <button
+                            class="px-5 py-2 bg-black text-white rounded duration-300 hover:bg-white hover:text-black">View
+                            Gallery</button>
+                    </div>
+                </div>
+                <div class=" bg-[url('images/IMG_4580.JPG')] bg-cover">
+                    <div class="w-full h-full bg-[#ffffffd5] p-8 space-y-4">
+                        <div class="md:text-3xl text-xl font-semibold">From Our Family to Yours</div>
+                        <div>With the Luxury Pergola, our family took decades of outdoor experience to bring the best
+                            product possible to the market.
+                        </div>
+                        <button
+                            class="px-5 py-2 bg-black text-white rounded duration-300 hover:bg-white hover:text-black">Learn
+                            More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="py-10">
+        <div class="container mx-auto px-6">
+            <div class="max-w-[1000px] mx-auto shadow-2xl rounded-2xl overflow-hidden">
+                <div class="grid md:grid-cols-2 gap-x-8">
+                    <div class="text-white bg-black p-9">
+                        <div class="text-4xl font-bold my-9">Contact us</div>
+                        <form class="space-y-5" action="#">
+                            <input class="border-b border-gray-500 py-2 bg-transparent outline-none w-full"
+                                placeholder="Name" type="text">
+                            <input class="border-b border-gray-500 py-2 bg-transparent outline-none w-full"
+                                placeholder="Email" type="text">
+                            <input class="border-b border-gray-500 py-2 bg-transparent outline-none w-full"
+                                placeholder="Phone" type="text">
+                            <textarea class="border-b border-gray-500 bg-transparent outline-none w-full" rows="5"
+                                placeholder="Message" name="" id=""></textarea>
+
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <label class="text-gray-500" for="">I would like to receive the newsletter.</label>
+                            </div>
+
+                            <button
+                                class="py-2 px-5 rounded bg-white text-black duration-300 hover:bg-black hover:text-white border">Submit</button>
+                        </form>
+                    </div>
+
+                    <div>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46830151.11795826!2d-119.8093025!3d44.24236485000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2s!4v1737391618897!5m2!1sen!2s"
+                            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+                        <div class="flex items-center gap-x-3 mt-5 px-1 ">
+                            <i class="text-2xl ri-map-pin-line"></i>
+                            <div>8762 SW 133rd Street Miami, FL. 33176</div>
+                        </div>
+
+                        <div class="flex items-center gap-x-3 my-5 px-1">
+                            <i class="text-2xl ri-phone-line"></i>
+                            <div>+1 (786) 278-4406</div>
+                        </div>
+                        <div class="space-x-2 px-1 mb-5">
+                            <i class=" ri-facebook-fill"></i>
+                            <i class=" ri-twitter-x-line"></i>
+                            <i class=" ri-instagram-line"></i>
+                            <i class=" ri-youtube-fill"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-10">
+        <div class="container mx-auto px-6">
+            <div class=" bg-[url('images/image-131311.png')] bg-center bg-cover">
+                <div
+                    class="w-full h-[350px] text-center text-white bg-[#000000a9] p-8 space-y-4 grid place-content-center">
+                    <div class="space-y-3">
+                        <div class="md:text-3xl text-xl font-semibold">Talk to an Expert</div>
+                        <div>Real in-house experts on the phone ready to help</div>
+                        <button
+                            class="px-5 py-2 bg-white text-black rounded duration-300 hover:bg-black hover:text-white">Connect
+                            with an Expert</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white">
+        <div class="container mx-auto py-10 px-6">
+            <div class="grid justify-center lg:grid-cols-4 md:grid-cols-4 md:gap-0 gap-y-9">
+                <div class="">
+                    <img src="images/white-Logo.png" alt="">
+                    <p class="my-4 ">Our family designed The Luxury Pergola with the intent to make lifetime-lasting
+                        louvered pergol
+                        as accessible for all homeowners.
+                    </p>
+
+                    <div class="space-x-2">
+                        <i class="bg-white text-black hover:bg-green-800 hover:text-white duration-300 cursor-pointer rounded-full p-1 ri-facebook-fill"></i>
+                        <i class="bg-white text-black hover:bg-green-800 hover:text-white duration-300 cursor-pointer rounded-full p-1 ri-twitter-x-line"></i>
+                        <i class="bg-white text-black hover:bg-green-800 hover:text-white duration-300 cursor-pointer rounded-full p-1 ri-instagram-line"></i>
+                        <i class="bg-white text-black hover:bg-green-800 hover:text-white duration-300 cursor-pointer rounded-full p-1 ri-youtube-fill"></i>
+                    </div>
+                </div>
+
+                <!-- <div class="lg:block hidden"></div> -->
+
+                <div>
+                    <ul class="space-y-3">
+                        <li><a class="font-bold">Quick Link</a></li>
+                        <li><a class="" href="Privacy-Policy.html">Privacy Policy</a></li>
+                        <li><a class="" href="Terms-of-service.html">Terms of service</a></li>
+                        <li><a href="Refund-Policy.html">Refund Policy</a></li>
+                        <li><a class="" href="#">FAQ</a></li>
+                        <li><a class="" href="contact-us.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul class="space-y-3">
+                        <li><a class="font-bold">Pergolas</a></li>
+                        <li><a href="outdoor-kitchens.html">outdoor kitchen</a></li>
+                        <li><a href="mounted-pergolas-on-brackets.html">Mounted on brackets</a></li>
+                        <li><a href="plain-modern-free-standing-pergolas.html">Free Standing</a></li>
+                        <li><a href="modern-wall-mounted-pergolas.html">Modern wall mounded</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="space-y-3">
+                        <li><a class="font-bold">Address</a></li>
+                        <li><a href="#"><i class="ri-map-pin-line"></i> 8762 SW 133rd Street Miami, FL. 33176</a></li>
+                        <li><a href="#"><i class="ri-phone-line"></i> +1 (786) 278-4406</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-500 py-3 text-center text-gray-500">Copyright pergolas 2025. All right reserved
+        </div>
+    </footer>
+    <script src="script.js?v=0.1"></script>
+</body>
+
+</html>

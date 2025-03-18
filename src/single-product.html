@@ -1,0 +1,553 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css?v=0.1" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+        integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Home</title>
+</head>
+
+
+<body class="min-w-[360px]">
+    <nav class="border-b">
+        <div class="text-center py-3 bg-black text-white md:text-base text-xs">Winter Sale on All Pergolas with Free
+            Express Delivery - 50% OFF! <a class="font-semibold" href="">ShopNow</a></div>
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between py-5">
+                <div class="flex items-center gap-3">
+                    <i id="hamburger-btn" class="text-2xl ri-menu-line lg:hidden"></i>
+                    <a href="index.html">
+
+                        <img src="images/black-logo.png" alt="">
+                    </a>
+                </div>
+                <div>
+                    <ul class="lg:flex hidden xl:gap-8 lg:gap-x-3">
+                        <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="index.html">Home</a></li>
+                        <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="our-story.html">Our Story</a></li>
+                        <div class="dropdown cursor-pointer group">
+                            <li class="xl:text-base lg:text-sm font-medium text-nowrap">Pergolas<i class="ri-arrow-down-s-fill"></i></li>
+                            <div class="dropdown-menu relative">
+                                <ul class="absolute z-20 bg-white shadow border hidden group-hover:block">
+                                    <li class="text-sm p-3 cursor-pointer font-medium text-nowrap hover:bg-gray-200"><a href="outdoor-kitchens.html">outdoor kitchen</a></li>
+                                    <li class="text-sm p-3 cursor-pointer font-medium text-nowrap hover:bg-gray-200"><a href="mounted-pergolas-on-brackets.html">mounted on brackets</a></li>
+                                    <li class="text-sm p-3 cursor-pointer font-medium text-nowrap hover:bg-gray-200"><a href="plain-modern-free-standing-pergolas.html">Free Standing</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="shop.html">Shop</a></li>
+                        <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="inspiration-gallery.html">Inspiration Gallery</a></li>
+                        <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+
+           
+            <div id="mobile-menu" class="lg:hidden hidden flex flex-col absolute top-0 bg-white left-0  -left-[100%] p-8 h-full md:w-auto w-[260px] bg-white z-20  ">
+               <div>
+                <i id="close-btn"  class="ri-close-circle-fill text-3xl float-end        lg:hidden"></i>
+            </div>
+                <ul class=" flex flex-col gap-3 mt-3" >
+                    <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="index.html">Home</a></li>
+                    <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="our-story.html">Our Story</a></li>
+                    <div class="dropdown cursor-pointer group">
+                        <li class="xl:text-base lg:text-sm flex items-center font-medium text-nowrap">Pergolas<i class="ri-arrow-down-s-fill mt-2 "></i></li>
+                        <div class="dropdown-menu ">
+                            <ul class="  bg-white     hidden group-hover:block">
+                                <li class="text-sm py-3 px-1  cursor-pointer font-medium text-nowrap hover:bg-gray-200"><a href="outdoor-kitchens.html">outdoor kitchen</a></li>
+                                <li class="text-sm  py-3  px-1 cursor-pointer font-medium text-nowrap hover:bg-gray-200"><a href="mounted-pergolas-on-brackets.html">mounted on brackets</a></li>
+                                <li class="text-sm   py-3 px-1  cursor-pointer font-medium text-nowrap hover:bg-gray-200"><a href="plain-modern-free-standing-pergolas.html">Free Standing</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="shop.html">Shop</a></li>
+                    <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="inspiration-gallery.html">Inspiration Gallery</a></li>
+                    <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </div>
+            
+
+           
+
+                </div>
+                <div class="flex items-center gap-5">
+                    <div class="lg:flex hidden items-center bg-gray-100 rounded">
+                        <input style="font-size: 12px;" class="bg-transparent outline-none px-4 p-2" placeholder="What are you looking for?"
+                            type="text">
+                        <i class="ri-search-line px-3 text-2xl"></i>
+                    </div>
+                    <div class="flex items-center md:gap-5 gap-3">
+                        <i class="md:text-2xl text-xl ri-search-line"></i>
+                        <i class="md:text-2xl text-xl ri-heart-3-line"></i>
+                        <a href="cart.html">
+
+                            <i class="md:text-2xl text-xl ri-shopping-cart-2-line"></i>
+                        </a>
+                        <i class="md:text-2xl text-xl ri-user-line"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-10">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-5 md:grid-cols-2 gap-5">
+                <div class="grid grid-cols-5 gap-3 lg:col-span-3 pt-4 md:sticky md:top-0 md:self-start">
+                    <div class="col-span-1 slider-nav">
+                        <img class="h-full" src="images/Free-Standing/2813275c-9205-47a0-bf22-dc1dfb823901.png" alt="">
+                        <img class="h-full" src="images/Free-Standing/IMG_7441.png" alt="">
+                        <img class="h-full" src="images/Free-Standing/IMG_3866.png" alt="">
+                        <img class="h-full" src="images/outdoor-Kitchen/IMG_3597.png" alt="">
+                        <img class="h-full" src="images/Free-Standing/2813275c-9205-47a0-bf22-dc1dfb823901.png" alt="">
+                    </div>
+
+                    <div class="col-span-4 slider-for">
+                        <img class="h-full" src="images/Free-Standing/2813275c-9205-47a0-bf22-dc1dfb823901.png" alt="">
+                        <img class="h-full" src="images/Free-Standing/IMG_7441.png" alt="">
+                        <img class="h-full" src="images/Free-Standing/IMG_3866.png" alt="">
+                        <img class="h-full" src="images/outdoor-Kitchen/IMG_3597.png" alt="">
+                        <img class="h-full" src="images/Free-Standing/2813275c-9205-47a0-bf22-dc1dfb823901.png" alt="">
+                    </div>
+                </div>
+                <div class="space-y-5 lg:col-span-2">
+                    <div class="font-semibold text-2xl">Attached modern pergolas</div>
+
+                    <div class="flex items-center gap-x-4">
+                        <div>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                        </div>
+
+                        <div class="text-gray-400">(150 Reviews)</div>
+                        <div>|</div>
+                        <div class="text-gray-400">In Stock</div>
+                    </div>
+
+                    <div class="text-2xl">$192.00</div>
+
+                    <p>PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free
+                        install & mess free removal Pressure sensitive.
+                    </p>
+                    <div class="border"></div>
+
+                    <div>
+                        <div class="text-xl flex items-center gap-3">Colors:
+                            <div class="bg-yellow-900 w-5 h-5 rounded-full"></div>
+                            <div class="bg-green-700 w-5 h-5 rounded-full"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-xl flex items-center gap-3">Size:
+                            <div class="border p-2 rounded-md border-gray-600">10x10</div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <input class="border p-2 rounded-md border-gray-600 outline-none " value="1" type="number"
+                            name="" id="">
+                        <i class="ri-poker-hearts-line border p-2 rounded-md border-gray-600 text-2xl"></i>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <button class="bg-green-800 text-white rounded-md w-full p-2">Add to cart</button>
+                        <button class="bg-green-800 text-white rounded-md w-full p-2">Buy Now</button>
+                    </div>
+
+                    <div class="border border-gray-500">
+                        <div class="flex items-center text-gray-800 px-3 py-4 gap-3">
+                            <i class="ri-truck-line text-4xl"></i>
+                            <div>
+                                <div class="text-xl font-semibold">Free Delivery</div>
+                                <div class="underline text-sm">Enter your postal code for Delivery Availability</div>
+                            </div>
+                        </div>
+
+                        <div class="border border-gray-500"></div>
+
+                        <div class="flex items-center text-gray-800 px-3 py-4 gap-3">
+                            <i class="ri-loop-right-fill text-4xl"></i>
+                            <div>
+                                <div class="text-xl font-semibold">Return Delivery</div>
+                                <div class="underline"> text-smFree 30 Days Delivery Returns. Details</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="flex flex-wrap items-center justify-between py-10">
+                <div class="md:text-xl font-semibold">All Reviews <span class="text-sm text-gray-500">(451)</span></div>
+
+                <div class="flex gap-3">
+                    <div class="bg-gray-100 md:py-2 md:px-4 px-2 rounded-full">
+                        <select class="bg-transparent outline-none text-xs" name="" id="">
+                            <option value="">Latest</option>
+                            <option value="">Latest</option>
+                            <option value="">Latest</option>
+                        </select>
+                    </div>
+
+                    <button class="bg-black text-white rounded-full text-xs md:py-2 py-1 md:px-4 px-2">Write a
+                        Review</button>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="rounded-lg border p-4 border-gray-400">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                        </div>
+                        <i class="ri-more-2-line"></i>
+                    </div>
+                    <div class="flex items-center gap-2 my-3">
+                        <div class="font-semibold text-xl">Samantha D.</div><i
+                            class="ri-checkbox-circle-fill text-green-600 text-xl"></i>
+                    </div>
+                    <p class="my-3 text-gray-500">"I absolutely love this t-shirt! The design is unique and the fabric
+                        feels so comfortable. As a
+                        fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt."
+                    </p>
+                    <div class="font-medium text-gray-500">Posted on August 14, 2023</div>
+                </div>
+                <div class="rounded-lg border p-4 border-gray-400">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                        </div>
+                        <i class="ri-more-2-line"></i>
+                    </div>
+                    <div class="flex items-center gap-2 my-3">
+                        <div class="font-semibold text-xl">Samantha D.</div><i
+                            class="ri-checkbox-circle-fill text-green-600 text-xl"></i>
+                    </div>
+                    <p class="my-3 text-gray-500">"I absolutely love this t-shirt! The design is unique and the fabric
+                        feels so comfortable. As a
+                        fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt."
+                    </p>
+                    <div class="font-medium text-gray-500">Posted on August 14, 2023</div>
+                </div>
+                <div class="rounded-lg border p-4 border-gray-400">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                        </div>
+                        <i class="ri-more-2-line"></i>
+                    </div>
+                    <div class="flex items-center gap-2 my-3">
+                        <div class="font-semibold text-xl">Samantha D.</div><i
+                            class="ri-checkbox-circle-fill text-green-600 text-xl"></i>
+                    </div>
+                    <p class="my-3 text-gray-500">"I absolutely love this t-shirt! The design is unique and the fabric
+                        feels so comfortable. As a
+                        fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt."
+                    </p>
+                    <div class="font-medium text-gray-500">Posted on August 14, 2023</div>
+                </div>
+                <div class="rounded-lg border p-4 border-gray-400">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                        </div>
+                        <i class="ri-more-2-line"></i>
+                    </div>
+                    <div class="flex items-center gap-2 my-3">
+                        <div class="font-semibold text-xl">Samantha D.</div><i
+                            class="ri-checkbox-circle-fill text-green-600 text-xl"></i>
+                    </div>
+                    <p class="my-3 text-gray-500">"I absolutely love this t-shirt! The design is unique and the fabric
+                        feels so comfortable. As a
+                        fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt."
+                    </p>
+                    <div class="font-medium text-gray-500">Posted on August 14, 2023</div>
+                </div>
+                <div class="rounded-lg border p-4 border-gray-400">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                        </div>
+                        <i class="ri-more-2-line"></i>
+                    </div>
+                    <div class="flex items-center gap-2 my-3">
+                        <div class="font-semibold text-xl">Samantha D.</div><i
+                            class="ri-checkbox-circle-fill text-green-600 text-xl"></i>
+                    </div>
+                    <p class="my-3 text-gray-500">"I absolutely love this t-shirt! The design is unique and the fabric
+                        feels so comfortable. As a
+                        fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt."
+                    </p>
+                    <div class="font-medium text-gray-500">Posted on August 14, 2023</div>
+                </div>
+                <div class="rounded-lg border p-4 border-gray-400">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                            <i class="ri-star-fill text-yellow-400"></i>
+                        </div>
+                        <i class="ri-more-2-line"></i>
+                    </div>
+                    <div class="flex items-center gap-2 my-3">
+                        <div class="font-semibold text-xl">Samantha D.</div><i
+                            class="ri-checkbox-circle-fill text-green-600 text-xl"></i>
+                    </div>
+                    <p class="my-3 text-gray-500">"I absolutely love this t-shirt! The design is unique and the fabric
+                        feels so comfortable. As a
+                        fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt."
+                    </p>
+                    <div class="font-medium text-gray-500">Posted on August 14, 2023</div>
+                </div>
+            </div>
+
+            <button class="border border-gray-300 rounded-full p-2 px-5 mx-auto block my-10">Load More Reviews</button>
+
+
+
+            <div class="font-semibold text-xl text-green-800">Related Item</div>
+            <div class="grid xl:grid-cols-4 lg:grid-cols-3 my-5 md:grid-cols-2 gap-x-5 gap-y-8">
+                <a href="single-product.html ">
+                    <div class="relative group overflow-hidden">
+                        <img class="rounded-md" src="images/d89b8c6045472dd5a48bf0e02238e280.png" alt="">
+                        <div class="absolute top-0 left-0 w-full flex items-center justify-between p-3">
+                            <div class="bg-red-500 text-white px-3 rounded-md py-1">-30%</div>
+                            <i class="ri-poker-hearts-line bg-white rounded-full text-xl px-2 py-1 justify-between"></i>
+                        </div>
+
+                        <div
+                            class="absolute -bottom-10 group-hover:bottom-0 duration-150 ease-linear left-0 w-full flex items-center justify-between">
+                            <button class="bg-black text-white rounded-md py-2 w-full">Add To Cart</button>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="font-semibold mt-2">Attached modern pergolas</div>
+                        <div class="text-red-600 font-medium">$370 <span class="text-gray-500">$400</span></div>
+                        <div class="flex items-center gap-x-4">
+                            <div>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                            </div>
+                            <span class="font-semibold text-gray-500">(99)</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="single-product.html ">
+                    <div class="relative group overflow-hidden">
+                        <img class="rounded-md" src="images/d89b8c6045472dd5a48bf0e02238e280.png" alt="">
+                        <div class="absolute top-0 left-0 w-full flex items-center justify-between p-3">
+                            <div class="bg-red-500 text-white px-3 rounded-md py-1">-30%</div>
+                            <i class="ri-poker-hearts-line bg-white rounded-full text-xl px-2 py-1 justify-between"></i>
+                        </div>
+
+                        <div
+                            class="absolute -bottom-10 group-hover:bottom-0 duration-150 ease-linear left-0 w-full flex items-center justify-between">
+                            <button class="bg-black text-white rounded-md py-2 w-full">Add To Cart</button>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="font-semibold mt-2">Attached modern pergolas</div>
+                        <div class="text-red-600 font-medium">$370 <span class="text-gray-500">$400</span></div>
+                        <div class="flex items-center gap-x-4">
+                            <div>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                            </div>
+                            <span class="font-semibold text-gray-500">(99)</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="single-product.html ">
+                    <div class="relative group overflow-hidden">
+                        <img class="rounded-md" src="images/d89b8c6045472dd5a48bf0e02238e280.png" alt="">
+                        <div class="absolute top-0 left-0 w-full flex items-center justify-between p-3">
+                            <div class="bg-red-500 text-white px-3 rounded-md py-1">-30%</div>
+                            <i class="ri-poker-hearts-line bg-white rounded-full text-xl px-2 py-1 justify-between"></i>
+                        </div>
+
+                        <div
+                            class="absolute -bottom-10 group-hover:bottom-0 duration-150 ease-linear left-0 w-full flex items-center justify-between">
+                            <button class="bg-black text-white rounded-md py-2 w-full">Add To Cart</button>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="font-semibold mt-2">Attached modern pergolas</div>
+                        <div class="text-red-600 font-medium">$370 <span class="text-gray-500">$400</span></div>
+                        <div class="flex items-center gap-x-4">
+                            <div>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                            </div>
+                            <span class="font-semibold text-gray-500">(99)</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="single-product.html ">
+                    <div class="relative group overflow-hidden">
+                        <img class="rounded-md" src="images/d89b8c6045472dd5a48bf0e02238e280.png" alt="">
+                        <div class="absolute top-0 left-0 w-full flex items-center justify-between p-3">
+                            <div class="bg-red-500 text-white px-3 rounded-md py-1">-30%</div>
+                            <i class="ri-poker-hearts-line bg-white rounded-full text-xl px-2 py-1 justify-between"></i>
+                        </div>
+
+                        <div
+                            class="absolute -bottom-10 group-hover:bottom-0 duration-150 ease-linear left-0 w-full flex items-center justify-between">
+                            <button class="bg-black text-white rounded-md py-2 w-full">Add To Cart</button>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="font-semibold mt-2">Attached modern pergolas</div>
+                        <div class="text-red-600 font-medium">$370 <span class="text-gray-500">$400</span></div>
+                        <div class="flex items-center gap-x-4">
+                            <div>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                                <i class="ri-star-fill text-yellow-400"></i>
+                            </div>
+                            <span class="font-semibold text-gray-500">(99)</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-black text-white">
+        <div class="container mx-auto py-10 px-6">
+            <div class="grid justify-center lg:grid-cols-5 md:grid-cols-4 md:gap-0 gap-y-9">
+                <div class="">
+                    <img src="images/white-Logo.png" alt="">
+                    <p class="my-4">Our family designed The Luxury Pergola with the intent to make lifetime-lasting
+                        louvered pergol
+                        as accessible for all homeowners.
+                    </p>
+
+                    <div class="space-x-2">
+                        <i class="bg-white text-black rounded-full p-1 ri-facebook-fill"></i>
+                        <i class="bg-white text-black rounded-full p-1 ri-twitter-x-line"></i>
+                        <i class="bg-white text-black rounded-full p-1 ri-instagram-line"></i>
+                        <i class="bg-white text-black rounded-full p-1 ri-youtube-fill"></i>
+                    </div>
+                </div>
+
+                <div class="lg:block hidden">
+
+                </div>
+
+                <div>
+                    <ul class="space-y-3">
+                        <li><a class="font-semibold" href="#">Quick Link</a></li>
+                        <li><a class="" href="#">Privacy Policy</a></li>
+                        <li><a class="" href="#">Terms Of Use</a></li>
+                        <li><a class="" href="#">FAQ</a></li>
+                        <li><a class="" href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul class="space-y-3">
+                        <li><a class="font-semibold" href="">Account</a></li>
+                        <li><a href="my-account.html">My Account</a></li>
+                        <li><a href="login.html">Login / Register</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="wishlist.html">Wishlist</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="space-y-3">
+                        <li><a class="font-semibold" href="#">Address</a></li>
+                        <li><a href="#">8762 SW 133rd Street Miami, FL. 33176</a></li>
+                        <li><a href="#">Phone</a></li>
+                        <li><a href="#">+1 (786) 278-4406</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-500 py-3 text-center text-gray-500">Copyright pergolas 2025. All right reserved
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script>
+        $('.slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.slider-nav'
+        });
+
+
+        $('.slider-nav').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            verticalSwiping: true,
+            vertical: true,
+            arrows: false,
+            asNavFor: '.slider-for',
+            dots: false,
+            focusOnSelect: true
+        });
+    </script>
+    <script src="script.js?v=0.5" ></script>
+</body>
+
+</html>
