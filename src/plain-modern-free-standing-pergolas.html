@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
         integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.3/css/lightgallery-bundle.min.css"
+        integrity="sha512-fXavT4uA4L0uTUFHC275D7zd751ohbSuD6VUMc5JysWfmR+NxTI3w7etE7N9hjTETcoh0w0V+24Cel4xXnqvCg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home</title>
 </head>
 
@@ -42,54 +46,77 @@
                 <div>
                     <ul class="lg:flex hidden xl:gap-8 lg:gap-x-3">
                         <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="index.html">Home</a></li>
-                        <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="our-story.html">Our Story</a></li>
+                        <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="our-story.html">Our
+                                Story</a></li>
                         <div class="dropdown cursor-pointer group">
-                            <li class="xl:text-base lg:text-sm font-medium text-nowrap">Pergolas<i class="ri-arrow-down-s-fill"></i></li>
+                            <li class="xl:text-base lg:text-sm font-medium text-nowrap">Pergolas<i
+                                    class="ri-arrow-down-s-fill"></i></li>
                             <div class="dropdown-menu relative">
                                 <ul class="absolute bg-white shadow border hidden group-hover:block">
-                                    <li class="text-sm p-3 cursor-pointer font-medium text-nowrap hover:bg-gray-200"><a href="outdoor-kitchens.html">outdoor kitchen</a></li>
-                                    <li class="text-sm p-3 cursor-pointer font-medium text-nowrap hover:bg-gray-200"><a href="mounted-pergolas-on-brackets.html">mounted on brackets</a></li>
-                                    <li class="text-sm p-3 cursor-pointer font-medium text-nowrap hover:bg-gray-200"><a href="plain-modern-free-standing-pergolas.html">Free Standing</a></li>
+                                    <li class="text-sm p-3 cursor-pointer font-medium text-nowrap hover:bg-gray-200"><a
+                                            href="outdoor-kitchens.html">outdoor kitchen</a></li>
+                                    <li class="text-sm p-3 cursor-pointer font-medium text-nowrap hover:bg-gray-200"><a
+                                            href="mounted-pergolas-on-brackets.html">mounted on brackets</a></li>
+                                    <li class="text-sm p-3 cursor-pointer font-medium text-nowrap hover:bg-gray-200"><a
+                                            href="plain-modern-free-standing-pergolas.html">Free Standing</a></li>
                                 </ul>
                             </div>
                         </div>
                         <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="shop.html">Shop</a></li>
-                        <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="inspiration-gallery.html">Inspiration Gallery</a></li>
-                        <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="contact-us.html">Contact Us</a></li>
+                        <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a
+                                href="inspiration-gallery.html">Inspiration Gallery</a></li>
+                        <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="contact-us.html">Contact
+                                Us</a></li>
                     </ul>
 
-           
-            <div id="mobile-menu" class="lg:hidden hidden flex flex-col absolute top-0 bg-white left-0  -left-[100%] p-8 h-full md:w-auto w-[260px] bg-white z-20  ">
-               <div>
-                <i id="close-btn"  class="ri-close-circle-fill text-3xl float-end        lg:hidden"></i>
-            </div>
-                <ul class=" flex flex-col gap-3 mt-3" >
-                    <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="index.html">Home</a></li>
-                    <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="our-story.html">Our Story</a></li>
-                    <div class="dropdown cursor-pointer group">
-                        <li class="xl:text-base lg:text-sm flex items-center font-medium text-nowrap">Pergolas<i class="ri-arrow-down-s-fill mt-2 "></i></li>
-                        <div class="dropdown-menu ">
-                            <ul class="  bg-white     hidden group-hover:block">
-                                <li class="text-sm py-3 px-1  cursor-pointer font-medium text-nowrap hover:bg-gray-200"><a href="outdoor-kitchens.html">outdoor kitchen</a></li>
-                                <li class="text-sm  py-3  px-1 cursor-pointer font-medium text-nowrap hover:bg-gray-200"><a href="mounted-pergolas-on-brackets.html">mounted on brackets</a></li>
-                                <li class="text-sm   py-3 px-1  cursor-pointer font-medium text-nowrap hover:bg-gray-200"><a href="plain-modern-free-standing-pergolas.html">Free Standing</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="shop.html">Shop</a></li>
-                    <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="inspiration-gallery.html">Inspiration Gallery</a></li>
-                    <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="contact-us.html">Contact Us</a></li>
-                </ul>
-            </div>
-            
 
-           
+                    <div id="mobile-menu"
+                        class="lg:hidden hidden flex flex-col absolute top-0 bg-white left-0  -left-[100%] p-8 h-full md:w-auto w-[260px] bg-white z-20  ">
+                        <div>
+                            <i id="close-btn" class="ri-close-circle-fill text-3xl float-end        lg:hidden"></i>
+                        </div>
+                        <ul class=" flex flex-col gap-3 mt-3">
+                            <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="index.html">Home</a>
+                            </li>
+                            <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="our-story.html">Our
+                                    Story</a></li>
+                            <div class="dropdown cursor-pointer group">
+                                <li class="xl:text-base lg:text-sm flex items-center font-medium text-nowrap">Pergolas<i
+                                        class="ri-arrow-down-s-fill mt-2 "></i></li>
+                                <div class="dropdown-menu ">
+                                    <ul class="  bg-white     hidden group-hover:block">
+                                        <li
+                                            class="text-sm py-3 px-1  cursor-pointer font-medium text-nowrap hover:bg-gray-200">
+                                            <a href="outdoor-kitchens.html">outdoor kitchen</a>
+                                        </li>
+                                        <li
+                                            class="text-sm  py-3  px-1 cursor-pointer font-medium text-nowrap hover:bg-gray-200">
+                                            <a href="mounted-pergolas-on-brackets.html">mounted on brackets</a>
+                                        </li>
+                                        <li
+                                            class="text-sm   py-3 px-1  cursor-pointer font-medium text-nowrap hover:bg-gray-200">
+                                            <a href="plain-modern-free-standing-pergolas.html">Free Standing</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="shop.html">Shop</a>
+                            </li>
+                            <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a
+                                    href="inspiration-gallery.html">Inspiration Gallery</a></li>
+                            <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a
+                                    href="contact-us.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+
+
 
                 </div>
                 <div class="flex items-center gap-5">
                     <div class="lg:flex hidden items-center bg-gray-100 rounded">
-                        <input style="font-size: 12px;" class="bg-transparent outline-none px-4 p-2" placeholder="What are you looking for?"
-                            type="text">
+                        <input style="font-size: 12px;" class="bg-transparent outline-none px-4 p-2"
+                            placeholder="What are you looking for?" type="text">
                         <i class="ri-search-line px-3 text-2xl"></i>
                     </div>
                     <div class="flex items-center md:gap-5 gap-3">
@@ -106,27 +133,26 @@
         </div>
     </nav>
 
- 
+
     <section class="bg-[url('images/IMG_8662_new.JPG')]  bg-no-repeat bg-cover bg-center">
         <div class="mx-auto py-10 space-y-6 grid place-content-center bg-[#00000094] h-[300px]">
             <div class="text-center">
                 <div class="text-white font-medium lg:text-4xl md:text-3xl text-xl">Plain Modern Free-Standing Pergolas
                 </div>
                 <div class="text-white my-3">Proudly Made in America 🇺🇸</div>
-                <button class="bg-white px-4 py-2 rounded">Schedule a Conversation</button>
+                <button
+                    class="px-5 py-2 bg-white text-black rounded duration-300 hover:bg-black hover:text-white">Schedule
+                    a Conversation</button>
             </div>
         </div>
     </section>
-     
-
-
-
 
     <section class="py-10 bg-gray-100">
         <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-x-10 md:gap-y-0 gap-y-10">
+            <div class="grid lg:grid-cols-2 items-center gap-x-10 lg:gap-y-0 gap-y-10">
                 <div class="text-3xl font-bold">
-                    <img class="w-full h-full" src="images/Free-Standing/2813275c-9205-47a0-bf22-dc1dfb823901.png" alt="">
+                    <img class="w-full h-full" src="images/Free-Standing/2813275c-9205-47a0-bf22-dc1dfb823901.png"
+                        alt="">
                 </div>
                 <div class="space-y-8">
                     <div class="text-3xl font-bold ">The Perfect Blend of Style and Functionality for Your Outdoor Space
@@ -150,19 +176,25 @@
 
     <section class="py-10">
         <div class="container mx-auto px-6">
-            <div class="md:grid md:grid-cols-2 flex flex-wrap flex-col-reverse gap-x-10 md:gap-y-0 gap-y-10">
+            <div
+                class="md:grid md:grid-cols-2 items-center flex flex-wrap flex-col-reverse gap-x-10 md:gap-y-0 gap-y-10">
                 <div class="space-y-8">
-                    <div class="text-3xl font-bold ">The First Shipment</div>
+                    <div class="text-3xl font-bold ">Enhance Your Outdoor Space with Versatile and Stylish Designs</div>
                     <p>
-                        After spending years in the field, making custom louvered pergolas, on site, we finally had a
-                        design that the average home owner could build themselves.
-                        That's when we launched our e-commerce store and it took off.
-                        Our first shipment was shortly after the launch and we've never looked back, offering louvered
-                        pergola kits to thousands of potential customers.
+                        Free-standing pergolas are versatile structures that don't need to be attached to any wall or
+                        building. Typically made
+                        of support posts and overhead beams, these pergolas can be placed anywhere in an open space like
+                        a garden, patio, or
+                        terrace. Their design creates inviting, shaded areas perfect for relaxing, hosting gatherings,
+                        or enhancing outdoor
+                        spaces with an aesthetic and functional touch.
                     </p>
+                    <p>Available in a range of materials such as wood, aluminum, and steel, each type offers unique benefits in terms of
+                    maintenance and durability. These pergolas are ideal for creating comfortable lounge areas with outdoor furniture. Their
+                    structure allows for decorative touches like string lights or mesh screens, creating a cozy and intimate atmosphere.</p>
                 </div>
                 <div class="text-3xl font-bold">
-                    <img class="w-full h-full" src="images/Free-Standing/IMG_1580.png" alt="">
+                    <img class="w-full h-full" src="images/1a9dbe9ac8e42360ffeadde977d3f655.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -316,74 +348,44 @@
 
 
     <section class="py-10">
-        <div class="container mx-auto px-6">
-            <div class="text-center text-3xl font-bold">Project Gallery</div>
-            <div class="text-center">Inspiring Spaces Crafted for Outdoor Living</div>
+        <div class="container mx-auto px-6 space-y-5">
+            <div>
+                <div class="text-center text-3xl font-bold">Project Gallery</div>
+                <div class="text-center">Inspiring Spaces Crafted for Outdoor Living</div>
+            </div>
 
-            <div class="center my-4">
-                <div class="px-2">
-                    <img class="w-full h-[250px]" src="images/Free-Standing/4D505B99-7735-4264-B5A2-FC8BE92B209E.png" alt="">
-                </div>
-                <div class="px-2">
-                    <img class="w-full h-[250px]" src="images/Free-Standing/2813275c-9205-47a0-bf22-dc1dfb823901.png" alt="">
-                </div>
-                <div class="px-2">
-                    <img class="w-full h-[250px]" src="images/Free-Standing/a92fc629-dc79-4bb9-95d0-893ff7b01edc.png" alt="">
-                </div>
-                <div class="px-2">
-                    <img class="w-full h-[250px]" src="images/Free-Standing/b58013fe-f616-4929-8a84-96e0b2b51003.png" alt="">
-                </div>
-                <div class="px-2">
-                    <img class="w-full h-[250px]" src="images/Free-Standing/c936a1d4-d40b-4b2d-9b8b-ff3853bbfb93.png" alt="">
-                </div>
-                <div class="px-2">
-                    <img class="w-full h-[250px]" src="images/Free-Standing/d89af11c-d219-461d-afb4-1c6a49df0612.png" alt="">
-                </div>
-                <div class="px-2">
-                    <img class="w-full h-[250px]" src="images/Free-Standing/dff49e8d-351a-44a0-8292-f11b4e3eaa87.png" alt="">
-                </div>
-                <div class="px-2">
-                    <img class="w-full h-[250px]" src="images/Free-Standing/IMG_0011.png" alt="">
-                </div>
-                <div class="px-2">
-                    <img class="w-full h-[250px]" src="images/Free-Standing/IMG_0042.png" alt="">
-                </div>
-                <div class="px-2">
-                    <img class="w-full h-[250px]" src="images/Free-Standing/IMG_0459.png" alt="">
-                </div>
-                <div class="px-2">
-                    <img class="w-full h-[250px]" src="images/Free-Standing/IMG_1580.png" alt="">
-                </div>
-                <div class="px-2">
-                    <img class="w-full h-[250px]" src="images/Free-Standing/IMG_1582.png" alt="">
-                </div>
-                <div class="px-2">
-                    <img class="w-full h-[250px]" src="images/Free-Standing/IMG_1583.png" alt="">
-                </div>
-                <div class="px-2">
-                    <img class="w-full h-[250px]" src="images/Free-Standing/IMG_3866.png" alt="">
-                </div>
-                <div class="px-2">
-                    <img class="w-full h-[250px]" src="images/Free-Standing/IMG_4838.png" alt="">
-                </div>
-                <div class="px-2">
-                    <img class="w-full h-[250px]" src="images/Free-Standing/IMG_6977.png" alt="">
-                </div>
-                <div class="px-2">
-                    <img class="w-full h-[250px]" src="images/Free-Standing/IMG_7441.png" alt="">
-                </div>
-                <div class="px-2">
-                    <img class="w-full h-[250px]" src="images/Free-Standing/IMG_7449.png" alt="">
-                </div>
-                <div class="px-2">
-                    <img class="w-full h-[250px]" src="images/Free-Standing/IMG_8861.png" alt="">
-                </div>
-
+            <div class="center gallery grid lg:grid-cols-4 sm:grid-cols-3 gap-5">
+                <a class="px-1" href="images/d89b8c6045472dd5a48bf0e02238e280.png"
+                    data-lg-id="eb5c4c3d-3509-41bd-86ef-77bfe01340bb">
+                    <img class="rounded-xl overflow-hidden object-cover h-[350px]"
+                        src="images/d89b8c6045472dd5a48bf0e02238e280.png" alt="">
+                </a>
+                <a class="px-1" href="images/1d7554bfcebb14dd4d85a2bd6f0662c7.jpg"
+                    data-lg-id="8126036f-fbb8-4f37-a4c2-d541f83a4aca">
+                    <img class="rounded-xl overflow-hidden object-cover h-[350px]"
+                        src="images/1d7554bfcebb14dd4d85a2bd6f0662c7.jpg" alt="">
+                </a>
+                <a class="px-1" href="images/IMG_8657.jpg" data-lg-id="5b15689f-505d-4bd2-9670-059623d781e1">
+                    <img class="rounded-xl overflow-hidden object-cover h-[350px]" src="images/IMG_8657.jpg" alt="">
+                </a>
+                <a class="px-1" href="images/nav-bg.jpg" data-lg-id="4a9cf1aa-4816-41f2-b4d4-04268dafb9e5">
+                    <img class="rounded-xl overflow-hidden object-cover h-[350px]" src="images/nav-bg.jpg" alt="">
+                </a>
+                <a class="px-1" href="images/d89b8c6045472dd5a48bf0e02238e280.png"
+                    data-lg-id="a0318c54-76ab-49f8-a66e-5d38c087efb1">
+                    <img class="rounded-xl overflow-hidden object-cover h-[350px]"
+                        src="images/d89b8c6045472dd5a48bf0e02238e280.png" alt="">
+                </a>
+                <a class="px-1" href="images/1d7554bfcebb14dd4d85a2bd6f0662c7.jpg"
+                    data-lg-id="b8f6a1fc-23cf-44fd-98ea-7578bb9be4b5">
+                    <img class="rounded-xl overflow-hidden object-cover h-[350px]"
+                        src="images/1d7554bfcebb14dd4d85a2bd6f0662c7.jpg" alt="">
+                </a>
             </div>
         </div>
     </section>
 
-    <section class="py-10">
+    <section class="py-10 bg-slate-100">
         <div class="container mx-auto px-6">
             <div class=" bg-[url('images/image-131311.png')] bg-center bg-cover">
                 <div
@@ -391,13 +393,14 @@
                     <div class="space-y-3">
                         <div class="md:text-3xl text-xl font-semibold">Talk to an Expert</div>
                         <div>Real in-house experts on the phone ready to help</div>
-                        <button class="px-5 py-2 bg-white text-black rounded">Connect with an Expert</button>
+                        <button
+                            class="modal-tog px-5 py-2 bg-white text-black rounded duration-300 hover:bg-black hover:text-white">Connect
+                            with an Expert</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
 
 
     <footer class="bg-black text-white">
@@ -457,16 +460,27 @@
     </footer>
 
 
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
         integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.3/lightgallery.min.js"
+        integrity="sha512-n02TbYimj64qb98ed5WwkNiSw/i9Xlvv4Ehvhg0jLp3qMAMWCYUHbOMbppZ0vimtyiyw9NqNqxUZC4hq86f4aQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
     <script>
+        let Gallery = document.querySelector('.gallery')
+
+        lightGallery(Gallery, {
+            thumbnail: true,
+            download: false,
+            // Plugins: [lgThumbnail]
+        });
+
+
         document.querySelectorAll('.accordian-head').forEach(element => {
             element.addEventListener('click', function () {
                 this.nextElementSibling.classList.toggle('accordian-col');
@@ -505,23 +519,23 @@
     </script>
     <script>
         var hamburgerBtn = document.getElementById('hamburger-btn');
-var mobileMenu = document.getElementById('mobile-menu');
-var closeBtn = document.getElementById('close-btn');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var closeBtn = document.getElementById('close-btn');
 
-hamburgerBtn.addEventListener('click', () => {
-  mobileMenu.classList.remove('hidden');
-  mobileMenu.style.left = '0';   
-});
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            mobileMenu.style.left = '0';
+        });
 
-closeBtn.addEventListener('click', () => {
-  mobileMenu.classList.add('hidden');
-  mobileMenu.style.left = '-100%';  
-});
+        closeBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.style.left = '-100%';
+        });
 
 
 
     </script>
-     
+
 </body>
 
 </html>

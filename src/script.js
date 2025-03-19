@@ -29,14 +29,16 @@ document.querySelectorAll('.accordian-head').forEach(element => {
 
 document.querySelectorAll('.modal-tog').forEach(item => {
     item.addEventListener('click', event => {
-        document.querySelector('.modal').classList.toggle('hidden');
         document.querySelector('.mask').classList.toggle('hidden');
+        document.querySelector('.modal').classList.toggle('hidden');
     });
 })
 
 document.querySelector('.mask').addEventListener('click', event => {
-    document.querySelector('.modal').classList.toggle('hidden');
-    document.querySelector('.mask').classList.toggle('hidden');
+    document.querySelector('.mask').classList.add('hidden');
+    document.querySelector('.modal').classList.add('hidden');
+    mobileMenu.classList.add('hidden');
+    mobileMenu.style.left = '-100%';
 });
 
 
