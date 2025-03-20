@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
         integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
         integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Home</title>
@@ -19,96 +19,135 @@
 
 
 <style>
-    .price-input {
-        width: 100%;
-        display: flex;
-        margin: 30px 0 35px;
-    }
-
-    .price-input .field {
-        /* display: flex; */
-        width: 100%;
-        height: 45px;
-        align-items: center;
-    }
-
-    .field input {
-        width: 100%;
-        height: 100%;
-        outline: none;
-        font-size: 19px;
-        border-radius: 5px;
+    .range-slider {
+        margin: auto;
         text-align: center;
-        border: 1px solid #999;
+        position: relative;
+        height: 5rem;
+    }
+
+    .range-slider svg,
+    .range-slider input[type=range] {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    input[type=number] {
+        border: 1px solid #ddd;
+        /* text-align: center; */
         -moz-appearance: textfield;
     }
 
-    input[type="number"]::-webkit-outer-spin-button,
-    input[type="number"]::-webkit-inner-spin-button {
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
         -webkit-appearance: none;
     }
 
-    .price-input .separator {
-        width: 130px;
-        display: flex;
-        font-size: 19px;
-        align-items: center;
-        justify-content: center;
+    input[type=number]:invalid,
+    input[type=number]:out-of-range {
+        border: 2px solid #ff6347;
     }
 
-    .slider {
-        height: 5px;
+    input[type=range] {
+        -webkit-appearance: none;
+        width: 100%;
+    }
+
+    input[type=range]:focus {
+        outline: none;
+    }
+
+    input[type=range]:focus::-webkit-slider-runnable-track {
+        background: #000000;
+    }
+
+    input[type=range]:focus::-ms-fill-lower {
+        background: #000000;
+    }
+
+    input[type=range]:focus::-ms-fill-upper {
+        background: #000000;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 3px;
+        cursor: pointer;
+        animate: 0.2s;
+        background: #000000;
+        border-radius: 1px;
+        box-shadow: none;
+        border: 0;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+        z-index: 2;
         position: relative;
-        background: #ddd;
-        border-radius: 5px;
+        box-shadow: 0px 0px 0px #000;
+        border: 1px solid #000000;
+        height: 18px;
+        width: 18px;
+        border-radius: 25px;
+        background: #000000;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -7px;
     }
 
-    .slider .progress {
-        height: 100%;
-        left: 25%;
-        right: 25%;
-        position: absolute;
-        border-radius: 5px;
-        background: #015f20;
-    }
-
-    .range-input {
-        position: relative;
-    }
-
-    .range-input input {
-        position: absolute;
+    input[type=range]::-moz-range-track {
         width: 100%;
         height: 5px;
-        top: -5px;
-        background: none;
-        pointer-events: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
+        cursor: pointer;
+        animate: 0.2s;
+        background: #000000;
+        border-radius: 1px;
+        box-shadow: none;
+        border: 0;
     }
 
-    input[type="range"]::-webkit-slider-thumb {
-        height: 17px;
-        width: 17px;
-        border-radius: 50%;
-        background: #015f20;
-        pointer-events: auto;
-        -webkit-appearance: none;
-        box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+    input[type=range]::-moz-range-thumb {
+        z-index: 2;
+        position: relative;
+        box-shadow: 0px 0px 0px #000;
+        border: 1px solid #000000;
+        height: 18px;
+        width: 18px;
+        border-radius: 25px;
+        background: #000000;
+        cursor: pointer;
     }
 
-    input[type="range"]::-moz-range-thumb {
-        height: 17px;
-        width: 17px;
-        border: none;
-        border-radius: 50%;
-        background: #015f20;
-        pointer-events: auto;
-        -moz-appearance: none;
-        box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+    input[type=range]::-ms-track {
+        width: 100%;
+        height: 5px;
+        cursor: pointer;
+        animate: 0.2s;
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
     }
 
-     
+    input[type=range]::-ms-fill-lower,
+    input[type=range]::-ms-fill-upper {
+        background: #000000;
+        border-radius: 1px;
+        box-shadow: none;
+        border: 0;
+    }
+
+    input[type=range]::-ms-thumb {
+        z-index: 2;
+        position: relative;
+        box-shadow: 0px 0px 0px #000;
+        border: 1px solid #000000;
+        height: 18px;
+        width: 18px;
+        border-radius: 25px;
+        background: #a1d0ff;
+        cursor: pointer;
+    }
+
     .support-box {
         top: 2rem;
         position: relative;
@@ -141,6 +180,7 @@
 
 
 <body class="min-w-[360px]">
+    <div class="mask hidden h-screen w-screen bg-black opacity-40 z-10 fixed"></div>
     <nav class="border-b">
         <div class="text-center py-3 bg-black text-white md:text-base text-xs">Winter Sale on All Pergolas with Free
             Express Delivery - 50% OFF! <a class="font-semibold" href="">ShopNow</a></div>
@@ -152,53 +192,75 @@
                         <img src="images/black-logo.png" alt="">
                     </a>
                 </div>
-                
 
                 <div>
                     <ul class="lg:flex hidden xl:gap-8 lg:gap-x-3">
                         <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="index.html">Home</a></li>
-                        <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="our-story.html">Our Story</a></li>
+                        <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="our-story.html">Our
+                                Story</a></li>
                         <div class="dropdown cursor-pointer group">
-                            <li class="xl:text-base lg:text-sm font-medium text-nowrap">Pergolas<i class="ri-arrow-down-s-fill"></i></li>
+                            <li class="xl:text-base lg:text-sm font-medium text-nowrap">Pergolas<i
+                                    class="ri-arrow-down-s-fill"></i></li>
                             <div class="dropdown-menu relative">
                                 <ul class="absolute bg-white shadow border hidden group-hover:block">
-                                    <li class="text-sm p-3 cursor-pointer font-medium text-nowrap hover:bg-gray-200"><a href="outdoor-kitchens.html">outdoor kitchen</a></li>
-                                    <li class="text-sm p-3 cursor-pointer font-medium text-nowrap hover:bg-gray-200"><a href="mounted-pergolas-on-brackets.html">mounted on brackets</a></li>
-                                    <li class="text-sm p-3 cursor-pointer font-medium text-nowrap hover:bg-gray-200"><a href="plain-modern-free-standing-pergolas.html">Free Standing</a></li>
+                                    <li class="text-sm p-3 cursor-pointer font-medium text-nowrap hover:bg-gray-200"><a
+                                            href="outdoor-kitchens.html">outdoor kitchen</a></li>
+                                    <li class="text-sm p-3 cursor-pointer font-medium text-nowrap hover:bg-gray-200"><a
+                                            href="mounted-pergolas-on-brackets.html">mounted on brackets</a></li>
+                                    <li class="text-sm p-3 cursor-pointer font-medium text-nowrap hover:bg-gray-200"><a
+                                            href="plain-modern-free-standing-pergolas.html">Free Standing</a></li>
                                 </ul>
                             </div>
                         </div>
                         <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="shop.html">Shop</a></li>
-                        <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="inspiration-gallery.html">Inspiration Gallery</a></li>
-                        <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="contact-us.html">Contact Us</a></li>
+                        <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a
+                                href="inspiration-gallery.html">Inspiration Gallery</a></li>
+                        <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="contact-us.html">Contact
+                                Us</a></li>
                     </ul>
 
-           
-            <div id="mobile-menu" style="z-index: 999;" class="lg:hidden hidden flex flex-col absolute top-0 bg-white left-0  -left-[100%] p-8 h-full md:w-auto w-[260px] bg-white z-20  ">
-               <div>
-                <i id="close-btn"  class="ri-close-circle-fill text-3xl float-end   lg:hidden"></i>
-            </div>
-                <ul class=" flex flex-col gap-3 mt-3" >
-                    <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="index.html">Home</a></li>
-                    <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="our-story.html">Our Story</a></li>
-                    <div class="dropdown cursor-pointer group">
-                        <li class="xl:text-base lg:text-sm flex items-center font-medium text-nowrap">Pergolas<i class="ri-arrow-down-s-fill mt-2 "></i></li>
-                        <div class="dropdown-menu ">
-                            <ul class="  bg-white     hidden group-hover:block">
-                                <li class="text-sm py-3 px-1  cursor-pointer font-medium text-nowrap hover:bg-gray-200"><a href="outdoor-kitchens.html">outdoor kitchen</a></li>
-                                <li class="text-sm  py-3  px-1 cursor-pointer font-medium text-nowrap hover:bg-gray-200"><a href="mounted-pergolas-on-brackets.html">mounted on brackets</a></li>
-                                <li class="text-sm   py-3 px-1  cursor-pointer font-medium text-nowrap hover:bg-gray-200"><a href="plain-modern-free-standing-pergolas.html">Free Standing</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="shop.html">Shop</a></li>
-                    <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="inspiration-gallery.html">Inspiration Gallery</a></li>
-                    <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="contact-us.html">Contact Us</a></li>
-                </ul>
-            </div>
-            
 
-           
+                    <div id="mobile-menu" style="z-index: 999;"
+                        class="lg:hidden hidden flex flex-col absolute top-0 bg-white left-0  -left-[100%] p-8 h-full md:w-auto w-[260px] bg-white z-20  ">
+                        <div>
+                            <i id="close-btn" class="ri-close-circle-fill text-3xl float-end   lg:hidden"></i>
+                        </div>
+                        <ul class=" flex flex-col gap-3 mt-3">
+                            <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="index.html">Home</a>
+                            </li>
+                            <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="our-story.html">Our
+                                    Story</a></li>
+                            <div class="dropdown cursor-pointer group">
+                                <li class="xl:text-base lg:text-sm flex items-center font-medium text-nowrap">Pergolas<i
+                                        class="ri-arrow-down-s-fill mt-2 "></i></li>
+                                <div class="dropdown-menu ">
+                                    <ul class="  bg-white     hidden group-hover:block">
+                                        <li
+                                            class="text-sm py-3 px-1  cursor-pointer font-medium text-nowrap hover:bg-gray-200">
+                                            <a href="outdoor-kitchens.html">outdoor kitchen</a>
+                                        </li>
+                                        <li
+                                            class="text-sm  py-3  px-1 cursor-pointer font-medium text-nowrap hover:bg-gray-200">
+                                            <a href="mounted-pergolas-on-brackets.html">mounted on brackets</a>
+                                        </li>
+                                        <li
+                                            class="text-sm   py-3 px-1  cursor-pointer font-medium text-nowrap hover:bg-gray-200">
+                                            <a href="plain-modern-free-standing-pergolas.html">Free Standing</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a href="shop.html">Shop</a>
+                            </li>
+                            <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a
+                                    href="inspiration-gallery.html">Inspiration Gallery</a></li>
+                            <li class="xl:text-base lg:text-sm font-medium text-nowrap"><a
+                                    href="contact-us.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+
+
 
                 </div>
 
@@ -227,34 +289,19 @@
         </div>
     </nav>
 
-
     <section class="py-10">
         <div class="container mx-auto px-6">
             <div class="grid xl:grid-cols-5 md:grid-cols-6 gap-7">
                 <div
-                    class="side-filter duration-150 ease-linear xl:col-span-1 col-span-2 md:static md:p-0 fixed top-0 -left-[100%] p-8 h-full md:w-auto w-[300px] bg-white z-20">
+                    class="side-filter duration-150 overflow-auto ease-linear xl:col-span-1 col-span-2 md:static md:p-0 fixed top-0 -left-[100%] p-8 h-full md:w-auto w-[300px] bg-white z-20">
                     <i class="ri-close-circle-fill text-3xl float-end side-filter-close md:hidden"></i>
                     <div class="space-y-6">
-                        <div class="font-semibold mb-4">Widget price filter</div>
-                        <div class="">
-                            <div class="price-input">
-                                <div class="field">
-                                    <span>Min</span>
-                                    <input type="number" class="input-min" value="2500">
-                                </div>
-                                <div class="separator">-</div>
-                                <div class="field">
-                                    <span>Max</span>
-                                    <input type="number" class="input-max" value="7500">
-                                </div>
-                            </div>
-                            <div class="slider">
-                                <div class="progress"></div>
-                            </div>
-                            <div class="range-input">
-                                <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
-                                <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
-                            </div>
+                        <div class="font-semibold mb-4 text-3xl capitalize"><i class="ri-filter-3-line"></i> filter
+                        </div>
+
+                        <div class="border rounded-md flex items-center overflow-hidden bg-gray-100">
+                            <i class="ri-search-line bg-black p-1 px-2 text-white h-full"></i>
+                            <input class="outline-none w-full bg-transparent px-2" type="search" name="" id="">
                         </div>
 
                         <div class="border-b"></div>
@@ -262,46 +309,20 @@
                         <div class="space-y-2">
                             <div class="font-semibold mb-4">Product Categories</div>
                             <div>
-                                <input class="" type="checkbox" name="" id="">
-                                <label class="font-medium" for="">Gas Grills</label>
+                                <input class="" type="checkbox" name="" id="cat1">
+                                <label class="font-medium" for="cat1">outdoor kitchen</label>
                             </div>
                             <div>
-                                <input class="" type="checkbox" name="" id="">
-                                <label class="font-medium" for="">Charcoal Grills</label>
+                                <input class="" type="checkbox" name="" id="cat2">
+                                <label class="font-medium" for="cat2">mounted on brackets</label>
                             </div>
                             <div>
-                                <input class="" type="checkbox" name="" id="">
-                                <label class="font-medium" for="">pellet grills</label>
+                                <input class="" type="checkbox" name="" id="cat3">
+                                <label class="font-medium" for="cat3">Free Standing</label>
                             </div>
                             <div>
-                                <input class="" type="checkbox" name="" id="">
-                                <label class="font-medium" for="">Gas Griddles</label>
-                            </div>
-                        </div>
-
-                        <div class="border-b"></div>
-
-                        <div class="space-y-2">
-                            <div class="font-semibold mb-4">Filter by Color</div>
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center gap-2">
-                                    <div class="bg-yellow-900 w-5 h-5 rounded-full"></div>
-                                    <div>Bronze</div>
-                                </div>
-                                <div>(1)</div>
-                            </div>
-                        </div>
-
-                        <div class="border-b"></div>
-
-                        <div class="space-y-2">
-                            <div class="font-semibold mb-4">Size</div>
-                            <div class="flex items-center justify-between">
-                                <div>
-                                    <input class="" type="checkbox" name="" id="">
-                                    <label class="font-medium" for="">10' x 10'</label>
-                                </div>
-                                <div>(1)</div>
+                                <input class="" type="checkbox" name="" id="cat4">
+                                <label class="font-medium" for="cat4">Modern wall mounded</label>
                             </div>
                         </div>
 
@@ -310,14 +331,53 @@
                         <div class="space-y-2">
                             <div class="font-semibold mb-4">Product Status</div>
                             <div>
-                                <input class="" type="checkbox" name="" id="">
-                                <label class="font-medium" for="">In Stock</label>
+                                <input class="" type="checkbox" name="" id="Stock">
+                                <label class="font-medium" for="Stock">In Stock</label>
                             </div>
                             <div>
-                                <input class="" type="checkbox" name="" id="">
-                                <label class="font-medium" for="">On Sale</label>
+                                <input class="" type="checkbox" name="" id="sale">
+                                <label class="font-medium" for="sale">On Sale</label>
                             </div>
                         </div>
+
+                        <div class="border-b"></div>
+                        <div class="space-y-2">
+                            <div class="font-semibold mb-4">Sort By</div>
+                            <div>
+                                <input class="" type="checkbox" name="" id="latest">
+                                <label class="font-medium" for="latest">latest</label>
+                            </div>
+                            <div>
+                                <input class="" type="checkbox" name="" id="LTH">
+                                <label class="font-medium" for="LTH">low to high</label>
+                            </div>
+                            <div>
+                                <input class="" type="checkbox" name="" id="HTL">
+                                <label class="font-medium" for="HTL">high to low</label>
+                            </div>
+                        </div>
+
+                        <div class="border-b"></div>
+
+                        <div class="range-slider">
+                            <div class="flex items-center justify-between gap-2">
+                                <div class="space-y-1 w-full">
+                                    <div class="text-xs text-start text-slate-600">Min price</div>
+                                    <input class="w-full p-1 rounded-md font-medium" type="number" value="0" min="0"
+                                        max="120000" />
+                                </div>
+                                -
+                                <div class="space-y-1 w-full">
+                                    <div class="text-xs text-start text-slate-600">Max price</div>
+                                    <input class="w-full p-1 rounded-md font-medium" type="number" value="50000" min="0"
+                                        max="120000" />
+                                </div>
+                            </div>
+                            <input value="0" min="0" max="120000" step="500" type="range" />
+                            <input value="50000" min="0" max="120000" step="500" type="range" />
+                        </div>
+                        <button
+                            class="bg-green-800 hover:bg-black duration-300 p-2 rounded-md text-white w-full">Clear</button>
                     </div>
                 </div>
 
@@ -327,7 +387,7 @@
                             <i class="side-filter-tog text-xl ri-menu-line md:hidden"></i>
                             <div class="text-gray-500 text-xs text-nowrap">Showing all 16 results</div>
                         </div>
-                        <div class="">
+                        <!-- <div class="">
                             <div class="flex items-center justify-between gap-4 text-xs">
                                 <div class="text-gray-500 text-center">Sort: <span class="text-black font-medium"> Sort
                                         by
@@ -336,358 +396,208 @@
                                         Items</span>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
 
-                    <div class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-x-5 gap-y-8">
-                        <a href="single-product.html">
-                            <div class="relative group overflow-hidden">
-                                <img class="rounded-md" src="images/d89b8c6045472dd5a48bf0e02238e280.png" alt="">
-                                <div class="absolute top-0 left-0 w-full flex items-center justify-between p-3">
-                                    <div class="bg-red-500 text-white px-3 rounded-md py-1">-30%</div>
-                                    <i
-                                        class="ri-poker-hearts-line bg-white rounded-full text-xl px-2 py-1 justify-between"></i>
+                    <div class="grid lg:grid-cols-3 md:grid-cols-2">
+                        <a class="group" href="single-product.html">
+                            <div class="group-hover:border-green-700 border-2 rounded-md border-white p-3">
+                                <div class="relative overflow-hidden">
+                                    <!-- before image -->
+                                    <img class="rounded-md h-[250px] w-full object-cover transition duration-300"
+                                        src="images/d89b8c6045472dd5a48bf0e02238e280.png" alt="">
+                                    <!-- after image -->
+                                    <img class="rounded-md h-[250px] w-full object-cover transition duration-300 absolute opacity-0 group-hover:opacity-100 top-0"
+                                        src="images/Free-Standing/IMG_0042.png" alt="">
                                 </div>
-
-                                <div
-                                    class="absolute -bottom-10 group-hover:bottom-0 duration-150 ease-linear left-0 w-full flex items-center justify-between">
-                                    <button class="bg-black text-white rounded-md py-2 w-full">Add To Cart</button>
-                                </div>
-                            </div>
-                            <div class="space-y-2">
-                                <div class="font-semibold mt-2">Attached modern pergolas</div>
-                                <div class="text-red-600 font-medium">$370 <span class="text-gray-500">$400</span></div>
-                                <div class="flex items-center gap-x-4">
-                                    <div>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
+                                <div class="space-y-2">
+                                    <div class="font-semibold mt-2">Attached modern pergolas</div>
+                                    <div class="text-red-600 text-sm font-medium">$370 <span
+                                            class="text-gray-500">$400</span></div>
+                                    <div class="flex items-center gap-x-2">
+                                        <div class="flex">
+                                            <i class="ri-star-fill text-yellow-400"></i>
+                                            <i class="ri-star-fill text-yellow-400"></i>
+                                            <i class="ri-star-fill text-yellow-400"></i>
+                                            <i class="ri-star-fill text-yellow-400"></i>
+                                            <i class="ri-star-fill text-yellow-400"></i>
+                                        </div>
+                                        <span class="font-semibold text-xs text-gray-500">(99)</span>
                                     </div>
-                                    <span class="font-semibold text-gray-500">(99)</span>
                                 </div>
                             </div>
                         </a>
-                        <div>
-                            <div class="relative group overflow-hidden">
-                                <img class="rounded-md" src="images/d89b8c6045472dd5a48bf0e02238e280.png" alt="">
-                                <div class="absolute top-0 left-0 w-full flex items-center justify-between p-3">
-                                    <div class="bg-red-500 text-white px-3 rounded-md py-1">-30%</div>
-                                    <i
-                                        class="ri-poker-hearts-line bg-white rounded-full text-xl px-2 py-1 justify-between"></i>
+                        <a class="group" href="single-product.html">
+                            <div class="group-hover:border-green-700 border-2 rounded-md border-white p-3">
+                                <div class="relative overflow-hidden">
+                                    <!-- before image -->
+                                    <img class="rounded-md h-[250px] w-full object-cover transition duration-300"
+                                        src="images/d89b8c6045472dd5a48bf0e02238e280.png" alt="">
+                                    <!-- after image -->
+                                    <img class="rounded-md h-[250px] w-full object-cover transition duration-300 absolute opacity-0 group-hover:opacity-100 top-0"
+                                        src="images/Free-Standing/IMG_0042.png" alt="">
                                 </div>
-
-                                <div
-                                    class="absolute -bottom-10 group-hover:bottom-0 duration-150 ease-linear left-0 w-full flex items-center justify-between">
-                                    <button class="bg-black text-white rounded-md py-2 w-full">Add To Cart</button>
-                                </div>
-                            </div>
-                            <div class="space-y-2">
-                                <div class="font-semibold mt-2">Attached modern pergolas</div>
-                                <div class="text-red-600 font-medium">$370 <span class="text-gray-500">$400</span></div>
-                                <div class="flex items-center gap-x-4">
-                                    <div>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
+                                <div class="space-y-2">
+                                    <div class="font-semibold mt-2">Attached modern pergolas</div>
+                                    <div class="text-red-600 text-sm font-medium">$370 <span
+                                            class="text-gray-500">$400</span></div>
+                                    <div class="flex items-center gap-x-2">
+                                        <div class="flex">
+                                            <i class="ri-star-fill text-yellow-400"></i>
+                                            <i class="ri-star-fill text-yellow-400"></i>
+                                            <i class="ri-star-fill text-yellow-400"></i>
+                                            <i class="ri-star-fill text-yellow-400"></i>
+                                            <i class="ri-star-fill text-yellow-400"></i>
+                                        </div>
+                                        <span class="font-semibold text-xs text-gray-500">(99)</span>
                                     </div>
-                                    <span class="font-semibold text-gray-500">(99)</span>
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <div class="relative group overflow-hidden">
-                                <img class="rounded-md" src="images/d89b8c6045472dd5a48bf0e02238e280.png" alt="">
-                                <div class="absolute top-0 left-0 w-full flex items-center justify-between p-3">
-                                    <div class="bg-red-500 text-white px-3 rounded-md py-1">-30%</div>
-                                    <i
-                                        class="ri-poker-hearts-line bg-white rounded-full text-xl px-2 py-1 justify-between"></i>
+                        </a>
+                        <a class="group" href="single-product.html">
+                            <div class="group-hover:border-green-700 border-2 rounded-md border-white p-3">
+                                <div class="relative overflow-hidden">
+                                    <!-- before image -->
+                                    <img class="rounded-md h-[250px] w-full object-cover transition duration-300"
+                                        src="images/d89b8c6045472dd5a48bf0e02238e280.png" alt="">
+                                    <!-- after image -->
+                                    <img class="rounded-md h-[250px] w-full object-cover transition duration-300 absolute opacity-0 group-hover:opacity-100 top-0"
+                                        src="images/Free-Standing/IMG_0042.png" alt="">
                                 </div>
-
-                                <div
-                                    class="absolute -bottom-10 group-hover:bottom-0 duration-150 ease-linear left-0 w-full flex items-center justify-between">
-                                    <button class="bg-black text-white rounded-md py-2 w-full">Add To Cart</button>
-                                </div>
-                            </div>
-                            <div class="space-y-2">
-                                <div class="font-semibold mt-2">Attached modern pergolas</div>
-                                <div class="text-red-600 font-medium">$370 <span class="text-gray-500">$400</span></div>
-                                <div class="flex items-center gap-x-4">
-                                    <div>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
+                                <div class="space-y-2">
+                                    <div class="font-semibold mt-2">Attached modern pergolas</div>
+                                    <div class="text-red-600 text-sm font-medium">$370 <span
+                                            class="text-gray-500">$400</span></div>
+                                    <div class="flex items-center gap-x-2">
+                                        <div class="flex">
+                                            <i class="ri-star-fill text-yellow-400"></i>
+                                            <i class="ri-star-fill text-yellow-400"></i>
+                                            <i class="ri-star-fill text-yellow-400"></i>
+                                            <i class="ri-star-fill text-yellow-400"></i>
+                                            <i class="ri-star-fill text-yellow-400"></i>
+                                        </div>
+                                        <span class="font-semibold text-xs text-gray-500">(99)</span>
                                     </div>
-                                    <span class="font-semibold text-gray-500">(99)</span>
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <div class="relative group overflow-hidden">
-                                <img class="rounded-md" src="images/d89b8c6045472dd5a48bf0e02238e280.png" alt="">
-                                <div class="absolute top-0 left-0 w-full flex items-center justify-between p-3">
-                                    <div class="bg-red-500 text-white px-3 rounded-md py-1">-30%</div>
-                                    <i
-                                        class="ri-poker-hearts-line bg-white rounded-full text-xl px-2 py-1 justify-between"></i>
+                        </a>
+                        <a class="group" href="single-product.html">
+                            <div class="group-hover:border-green-700 border-2 rounded-md border-white p-3">
+                                <div class="relative overflow-hidden">
+                                    <!-- before image -->
+                                    <img class="rounded-md h-[250px] w-full object-cover transition duration-300"
+                                        src="images/d89b8c6045472dd5a48bf0e02238e280.png" alt="">
+                                    <!-- after image -->
+                                    <img class="rounded-md h-[250px] w-full object-cover transition duration-300 absolute opacity-0 group-hover:opacity-100 top-0"
+                                        src="images/Free-Standing/IMG_0042.png" alt="">
                                 </div>
-
-                                <div
-                                    class="absolute -bottom-10 group-hover:bottom-0 duration-150 ease-linear left-0 w-full flex items-center justify-between">
-                                    <button class="bg-black text-white rounded-md py-2 w-full">Add To Cart</button>
-                                </div>
-                            </div>
-                            <div class="space-y-2">
-                                <div class="font-semibold mt-2">Attached modern pergolas</div>
-                                <div class="text-red-600 font-medium">$370 <span class="text-gray-500">$400</span></div>
-                                <div class="flex items-center gap-x-4">
-                                    <div>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
+                                <div class="space-y-2">
+                                    <div class="font-semibold mt-2">Attached modern pergolas</div>
+                                    <div class="text-red-600 text-sm font-medium">$370 <span
+                                            class="text-gray-500">$400</span></div>
+                                    <div class="flex items-center gap-x-2">
+                                        <div class="flex">
+                                            <i class="ri-star-fill text-yellow-400"></i>
+                                            <i class="ri-star-fill text-yellow-400"></i>
+                                            <i class="ri-star-fill text-yellow-400"></i>
+                                            <i class="ri-star-fill text-yellow-400"></i>
+                                            <i class="ri-star-fill text-yellow-400"></i>
+                                        </div>
+                                        <span class="font-semibold text-xs text-gray-500">(99)</span>
                                     </div>
-                                    <span class="font-semibold text-gray-500">(99)</span>
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <div class="relative group overflow-hidden">
-                                <img class="rounded-md" src="images/d89b8c6045472dd5a48bf0e02238e280.png" alt="">
-                                <div class="absolute top-0 left-0 w-full flex items-center justify-between p-3">
-                                    <div class="bg-red-500 text-white px-3 rounded-md py-1">-30%</div>
-                                    <i
-                                        class="ri-poker-hearts-line bg-white rounded-full text-xl px-2 py-1 justify-between"></i>
+                        </a>
+                        <a class="group" href="single-product.html">
+                            <div class="group-hover:border-green-700 border-2 rounded-md border-white p-3">
+                                <div class="relative overflow-hidden">
+                                    <!-- before image -->
+                                    <img class="rounded-md h-[250px] w-full object-cover transition duration-300"
+                                        src="images/d89b8c6045472dd5a48bf0e02238e280.png" alt="">
+                                    <!-- after image -->
+                                    <img class="rounded-md h-[250px] w-full object-cover transition duration-300 absolute opacity-0 group-hover:opacity-100 top-0"
+                                        src="images/Free-Standing/IMG_0042.png" alt="">
                                 </div>
-
-                                <div
-                                    class="absolute -bottom-10 group-hover:bottom-0 duration-150 ease-linear left-0 w-full flex items-center justify-between">
-                                    <button class="bg-black text-white rounded-md py-2 w-full">Add To Cart</button>
-                                </div>
-                            </div>
-                            <div class="space-y-2">
-                                <div class="font-semibold mt-2">Attached modern pergolas</div>
-                                <div class="text-red-600 font-medium">$370 <span class="text-gray-500">$400</span></div>
-                                <div class="flex items-center gap-x-4">
-                                    <div>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
+                                <div class="space-y-2">
+                                    <div class="font-semibold mt-2">Attached modern pergolas</div>
+                                    <div class="text-red-600 text-sm font-medium">$370 <span
+                                            class="text-gray-500">$400</span></div>
+                                    <div class="flex items-center gap-x-2">
+                                        <div class="flex">
+                                            <i class="ri-star-fill text-yellow-400"></i>
+                                            <i class="ri-star-fill text-yellow-400"></i>
+                                            <i class="ri-star-fill text-yellow-400"></i>
+                                            <i class="ri-star-fill text-yellow-400"></i>
+                                            <i class="ri-star-fill text-yellow-400"></i>
+                                        </div>
+                                        <span class="font-semibold text-xs text-gray-500">(99)</span>
                                     </div>
-                                    <span class="font-semibold text-gray-500">(99)</span>
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <div class="relative group overflow-hidden">
-                                <img class="rounded-md" src="images/d89b8c6045472dd5a48bf0e02238e280.png" alt="">
-                                <div class="absolute top-0 left-0 w-full flex items-center justify-between p-3">
-                                    <div class="bg-red-500 text-white px-3 rounded-md py-1">-30%</div>
-                                    <i
-                                        class="ri-poker-hearts-line bg-white rounded-full text-xl px-2 py-1 justify-between"></i>
+                        </a>
+                        <a class="group" href="single-product.html">
+                            <div class="group-hover:border-green-700 border-2 rounded-md border-white p-3">
+                                <div class="relative overflow-hidden">
+                                    <!-- before image -->
+                                    <img class="rounded-md h-[250px] w-full object-cover transition duration-300"
+                                        src="images/d89b8c6045472dd5a48bf0e02238e280.png" alt="">
+                                    <!-- after image -->
+                                    <img class="rounded-md h-[250px] w-full object-cover transition duration-300 absolute opacity-0 group-hover:opacity-100 top-0"
+                                        src="images/Free-Standing/IMG_0042.png" alt="">
                                 </div>
-
-                                <div
-                                    class="absolute -bottom-10 group-hover:bottom-0 duration-150 ease-linear left-0 w-full flex items-center justify-between">
-                                    <button class="bg-black text-white rounded-md py-2 w-full">Add To Cart</button>
-                                </div>
-                            </div>
-                            <div class="space-y-2">
-                                <div class="font-semibold mt-2">Attached modern pergolas</div>
-                                <div class="text-red-600 font-medium">$370 <span class="text-gray-500">$400</span></div>
-                                <div class="flex items-center gap-x-4">
-                                    <div>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
+                                <div class="space-y-2">
+                                    <div class="font-semibold mt-2">Attached modern pergolas</div>
+                                    <div class="text-red-600 text-sm font-medium">$370 <span
+                                            class="text-gray-500">$400</span></div>
+                                    <div class="flex items-center gap-x-2">
+                                        <div class="flex">
+                                            <i class="ri-star-fill text-yellow-400"></i>
+                                            <i class="ri-star-fill text-yellow-400"></i>
+                                            <i class="ri-star-fill text-yellow-400"></i>
+                                            <i class="ri-star-fill text-yellow-400"></i>
+                                            <i class="ri-star-fill text-yellow-400"></i>
+                                        </div>
+                                        <span class="font-semibold text-xs text-gray-500">(99)</span>
                                     </div>
-                                    <span class="font-semibold text-gray-500">(99)</span>
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <div class="relative group overflow-hidden">
-                                <img class="rounded-md" src="images/d89b8c6045472dd5a48bf0e02238e280.png" alt="">
-                                <div class="absolute top-0 left-0 w-full flex items-center justify-between p-3">
-                                    <div class="bg-red-500 text-white px-3 rounded-md py-1">-30%</div>
-                                    <i
-                                        class="ri-poker-hearts-line bg-white rounded-full text-xl px-2 py-1 justify-between"></i>
-                                </div>
-
-                                <div
-                                    class="absolute -bottom-10 group-hover:bottom-0 duration-150 ease-linear left-0 w-full flex items-center justify-between">
-                                    <button class="bg-black text-white rounded-md py-2 w-full">Add To Cart</button>
-                                </div>
-                            </div>
-                            <div class="space-y-2">
-                                <div class="font-semibold mt-2">Attached modern pergolas</div>
-                                <div class="text-red-600 font-medium">$370 <span class="text-gray-500">$400</span></div>
-                                <div class="flex items-center gap-x-4">
-                                    <div>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                    </div>
-                                    <span class="font-semibold text-gray-500">(99)</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="relative group overflow-hidden">
-                                <img class="rounded-md" src="images/d89b8c6045472dd5a48bf0e02238e280.png" alt="">
-                                <div class="absolute top-0 left-0 w-full flex items-center justify-between p-3">
-                                    <div class="bg-red-500 text-white px-3 rounded-md py-1">-30%</div>
-                                    <i
-                                        class="ri-poker-hearts-line bg-white rounded-full text-xl px-2 py-1 justify-between"></i>
-                                </div>
-
-                                <div
-                                    class="absolute -bottom-10 group-hover:bottom-0 duration-150 ease-linear left-0 w-full flex items-center justify-between">
-                                    <button class="bg-black text-white rounded-md py-2 w-full">Add To Cart</button>
-                                </div>
-                            </div>
-                            <div class="space-y-2">
-                                <div class="font-semibold mt-2">Attached modern pergolas</div>
-                                <div class="text-red-600 font-medium">$370 <span class="text-gray-500">$400</span></div>
-                                <div class="flex items-center gap-x-4">
-                                    <div>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                    </div>
-                                    <span class="font-semibold text-gray-500">(99)</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="relative group overflow-hidden">
-                                <img class="rounded-md" src="images/d89b8c6045472dd5a48bf0e02238e280.png" alt="">
-                                <div class="absolute top-0 left-0 w-full flex items-center justify-between p-3">
-                                    <div class="bg-red-500 text-white px-3 rounded-md py-1">-30%</div>
-                                    <i
-                                        class="ri-poker-hearts-line bg-white rounded-full text-xl px-2 py-1 justify-between"></i>
-                                </div>
-
-                                <div
-                                    class="absolute -bottom-10 group-hover:bottom-0 duration-150 ease-linear left-0 w-full flex items-center justify-between">
-                                    <button class="bg-black text-white rounded-md py-2 w-full">Add To Cart</button>
-                                </div>
-                            </div>
-                            <div class="space-y-2">
-                                <div class="font-semibold mt-2">Attached modern pergolas</div>
-                                <div class="text-red-600 font-medium">$370 <span class="text-gray-500">$400</span></div>
-                                <div class="flex items-center gap-x-4">
-                                    <div>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                    </div>
-                                    <span class="font-semibold text-gray-500">(99)</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="relative group overflow-hidden">
-                                <img class="rounded-md" src="images/d89b8c6045472dd5a48bf0e02238e280.png" alt="">
-                                <div class="absolute top-0 left-0 w-full flex items-center justify-between p-3">
-                                    <div class="bg-red-500 text-white px-3 rounded-md py-1">-30%</div>
-                                    <i
-                                        class="ri-poker-hearts-line bg-white rounded-full text-xl px-2 py-1 justify-between"></i>
-                                </div>
-
-                                <div
-                                    class="absolute -bottom-10 group-hover:bottom-0 duration-150 ease-linear left-0 w-full flex items-center justify-between">
-                                    <button class="bg-black text-white rounded-md py-2 w-full">Add To Cart</button>
-                                </div>
-                            </div>
-                            <div class="space-y-2">
-                                <div class="font-semibold mt-2">Attached modern pergolas</div>
-                                <div class="text-red-600 font-medium">$370 <span class="text-gray-500">$400</span></div>
-                                <div class="flex items-center gap-x-4">
-                                    <div>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                    </div>
-                                    <span class="font-semibold text-gray-500">(99)</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="relative group overflow-hidden">
-                                <img class="rounded-md" src="images/d89b8c6045472dd5a48bf0e02238e280.png" alt="">
-                                <div class="absolute top-0 left-0 w-full flex items-center justify-between p-3">
-                                    <div class="bg-red-500 text-white px-3 rounded-md py-1">-30%</div>
-                                    <i
-                                        class="ri-poker-hearts-line bg-white rounded-full text-xl px-2 py-1 justify-between"></i>
-                                </div>
-
-                                <div
-                                    class="absolute -bottom-10 group-hover:bottom-0 duration-150 ease-linear left-0 w-full flex items-center justify-between">
-                                    <button class="bg-black text-white rounded-md py-2 w-full">Add To Cart</button>
-                                </div>
-                            </div>
-                            <div class="space-y-2">
-                                <div class="font-semibold mt-2">Attached modern pergolas</div>
-                                <div class="text-red-600 font-medium">$370 <span class="text-gray-500">$400</span></div>
-                                <div class="flex items-center gap-x-4">
-                                    <div>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                    </div>
-                                    <span class="font-semibold text-gray-500">(99)</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="relative group overflow-hidden">
-                                <img class="rounded-md" src="images/d89b8c6045472dd5a48bf0e02238e280.png" alt="">
-                                <div class="absolute top-0 left-0 w-full flex items-center justify-between p-3">
-                                    <div class="bg-red-500 text-white px-3 rounded-md py-1">-30%</div>
-                                    <i
-                                        class="ri-poker-hearts-line bg-white rounded-full text-xl px-2 py-1 justify-between"></i>
-                                </div>
-
-                                <div
-                                    class="absolute -bottom-10 group-hover:bottom-0 duration-150 ease-linear left-0 w-full flex items-center justify-between">
-                                    <button class="bg-black text-white rounded-md py-2 w-full">Add To Cart</button>
-                                </div>
-                            </div>
-                            <div class="space-y-2">
-                                <div class="font-semibold mt-2">Attached modern pergolas</div>
-                                <div class="text-red-600 font-medium">$370 <span class="text-gray-500">$400</span></div>
-                                <div class="flex items-center gap-x-4">
-                                    <div>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                        <i class="ri-star-fill text-yellow-400"></i>
-                                    </div>
-                                    <span class="font-semibold text-gray-500">(99)</span>
-                                </div>
-                            </div>
-                        </div>
+                        </a>
+                    </div>
+                    <div class="flex justify-center my-4">
+                        <nav aria-label="Page navigation example">
+                            <ul class="inline-flex -space-x-px text-sm">
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 "><i
+                                            class="ri-arrow-left-s-line"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 ">1</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 ">2</a>
+                                </li>
+                                <li>
+                                    <a href="#" aria-current="page"
+                                        class="flex items-center justify-center px-3 h-8 text-white border border-gray-300 bg-green-700">3</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 ">4</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 ">5</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 "><i
+                                            class="ri-arrow-right-s-line"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -749,20 +659,83 @@
         <div class="border-t border-gray-500 py-3 text-center text-gray-500">Copyright pergolas 2025. All right reserved
         </div>
     </footer>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+
+    <script>
+        (function () {
+
+            var parent = document.querySelector(".range-slider");
+            if (!parent) return;
+
+            var
+                rangeS = parent.querySelectorAll("input[type=range]"),
+                numberS = parent.querySelectorAll("input[type=number]");
+
+            rangeS.forEach(function (el) {
+                el.oninput = function () {
+                    var slide1 = parseFloat(rangeS[0].value),
+                        slide2 = parseFloat(rangeS[1].value);
+
+                    if (slide1 > slide2) {
+                        [slide1, slide2] = [slide2, slide1];
+                        // var tmp = slide2;
+                        // slide2 = slide1;
+                        // slide1 = tmp;
+                    }
+
+                    numberS[0].value = slide1;
+                    numberS[1].value = slide2;
+                }
+            });
+
+            numberS.forEach(function (el) {
+                el.oninput = function () {
+                    var number1 = parseFloat(numberS[0].value),
+                        number2 = parseFloat(numberS[1].value);
+
+                    if (number1 > number2) {
+                        var tmp = number1;
+                        numberS[0].value = number2;
+                        numberS[1].value = tmp;
+                    }
+
+                    rangeS[0].value = number1;
+                    rangeS[1].value = number2;
+
+                }
+            });
+
+        })();
+    </script>
 
     <script>
         document.querySelector('.side-filter-tog').addEventListener('click', () => {
             document.querySelector('.side-filter').classList.remove('-left-[100%]')
             document.querySelector('.side-filter').classList.add('left-0')
+            document.querySelector('.mask').classList.toggle('hidden');
+            document.body.style.overflowY = "hidden"
         })
 
         document.querySelector('.side-filter-close').addEventListener('click', () => {
             document.querySelector('.side-filter').classList.add('-left-[100%]')
             document.querySelector('.side-filter').classList.remove('left-0')
+            document.querySelector('.mask').classList.toggle('hidden');
+            document.body.style.overflowY = "scroll"
         })
+
+
+        document.querySelector('.mask').addEventListener('click', event => {
+            document.querySelector('.side-filter').classList.add('-left-[100%]')
+            document.querySelector('.side-filter').classList.remove('left-0')
+            document.querySelector('.mask').classList.toggle('hidden');
+            document.body.style.overflowY = "scroll"
+        });
     </script>
-        <script src="script.js?v=0.1" ></script>
-   
+
+
+
+    <!-- <script src="script.js?v=0.1"></script> -->
+
 </body>
 
 </html>
